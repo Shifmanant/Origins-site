@@ -1,0 +1,72 @@
+@import url('https://fonts.cdnfonts.com/css/phatt-phreddy');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 220vh; 
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 5%;
+    font-family: 'Phatt Phreddy', sans-serif;
+    color: white;
+    background: linear-gradient(to right, #ff0000, #0b0000);
+    background: linear-gradient(to bottom, #ff0000 0%, #000000 70%, #000000 100%);
+}
+
+.text-block {
+    position: relative;
+    top: 400px;
+    width: 50%;
+    height: 100%;
+    font-size: 5vw;
+    line-height: 1.2;
+    font-weight: 800px;
+    text-transform: uppercase;
+}
+
+.image-block {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.circle-background {
+    position: absolute;
+    top: 160px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #1310be, #000);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.circle-image {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-block {
+        margin-top: 30px;
+    }
+}
