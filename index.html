@@ -5,31 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Origin</title>
-<!--     <base href="/origins-site/"> -->
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <div class="text-block1">
-        <div>ORIGIN</div>
-        <div>SPORTS</div>
-        <div>MANAGEMENT</div>
-    </div>
 
-    <div class="image-block">
-        <img src="images/ball.jpg" alt="Мяч" class="circle-image" />
-        <div class="circle-background"></div>
-    </div>
-
-    <div class=" semi-sphere">
-        <div class="text-block2">
-            <div>We are Origin Sports Management</div>
+    <div class="hero-section">
+        <div class="text-block1">
+            <div>ORIGIN</div>
+            <div>SPORTS</div>
+            <div>MANAGEMENT</div>
         </div>
+
+        <div class="image-block">
+            <img src="images/ball.jpg" alt="Мяч" class="circle-image" />
+            <div class="circle-background"></div>
+        </div>
+
     </div>
 
-    <div class="bold-text">
-        <div>The Excello</div>
-        <div>Theory</div>
+    <div class="main-container">
+        
+        <div class="semi-sphere semi-sphere--red" style="margin-top: -100px;">
+
+            <div class="bold-text" style="margin-top: -20px;">
+                <div>ABOUT US</div>
+            </div>
+
+            <div class="text-block2">   
+                <div>We are a dynamic and innovative</div>
+                <div>sports management agency based in</div>
+                <div>Madrid. At OSMC we specialize in talent</div>
+                <div>management, legal representation</div>
+                <div>consultations and branding for</div>
+                <div>professional athletes, sports teams</div>
+                <div>and federations.</div>
+                <div>We aim to be pioneers in our industry</div>
+                <div>by catering to the best interests for our</div>
+                <div>clients.</div>
+                <div style="margin-bottom: 30px;"></div>
+                <div>We have strategically placed ourselves</div>
+                <div>in the heart of european football, which</div>
+                <div>enables us to bridge the gap across</div>
+                <div>borders.</div>
+            </div>
+
+        </div>
+
+        <div class="semi-sphere semi-sphere--blue" style="margin-top: 180px;">
+
+            <div class="bold-text" style="text-decoration: underline;">
+                <div>SERVICES</div>
+            </div>
+
+            <div class="bold-text" style="margin-bottom: 150px;">
+                <div>LEGAL REPRESENTATION</div>
+                <div>ASSET MANAGMENT</div>
+                <div>CONSULTATIONS</div>
+                <div>ATHLETE REPRESENTATION</div>
+            </div>
+
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const textBlock = document.querySelector('.text-block1');
+                setTimeout(() => {
+                    textBlock.classList.add('animate');
+                }, 100);
+            });
+        </script>
     </div>
+</body>
 
 </html>

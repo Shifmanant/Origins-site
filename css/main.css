@@ -7,38 +7,81 @@
     padding: 0;
 }
 
-body {
-    min-height: 220vh;
-    height: auto;
+.main-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+body {
+    min-height: 300vh;
+    height: auto;
+    display: block;
+    padding: 0 5%;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 0 5%;
     font-family: 'Phatt Phreddy', sans-serif;
     color: white;
-    background: linear-gradient(to bottom, #ff0000 0%, #000000 70%, #000000 100%);
+    background: linear-gradient(to bottom,#ff0000 0%,#000000 100vh, #000000 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    background-color: #000000;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 400px;
+    gap: 100px;
 }
 
 .text-block1 {
     position: relative;
-    top: 400px;
     width: 50%;
-    height: 100%;
-    font-size: 5vw;
+    height: auto;
+    font-size: clamp(24px, 5vw, 60px);
     line-height: 1.2;
     font-weight: 800;
     text-transform: uppercase;
 }
 
+.text-block1 div {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.text-block1.animate div {
+    animation: slideInFromLeft 0.8s forwards ease;
+}
+
+.text-block1.animate div:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.text-block1.animate div:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.text-block1.animate div:nth-child(3) {
+    animation-delay: 1.4s;
+}
+
 .image-block {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 80vw;
+    max-width: 500px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    transform: translateY(-250px);
 }
 
 .circle-background {
     position: absolute;
-    top: 160px;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -49,7 +92,7 @@ body {
 
 .circle-image {
     position: absolute;
-    top: 100px;
+    top: -60px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -66,60 +109,91 @@ img {
 }
 
 .semi-sphere {
-    position: absolute;
-    top: 1000px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 450px;
+    position: relative; 
+    margin: 80px auto;
+    width: 90vw; 
+    max-width: 500px;
     height: 500px;
-    background: linear-gradient(to bottom left, #ff0000 0%, #000000 60%, #000000 100%);
     border-top-left-radius: 200px;
     border-top-right-radius: 200px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    overflow: hidden;
-
-    /* Центрируем содержимое */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 30px;
-    /* немного внутреннего отступа */
+    padding: 60px 30px 30px 30px;
     box-sizing: border-box;
     color: white;
     text-align: center;
+    overflow: visible;
+}
+
+.semi-sphere--red {
+    background: linear-gradient(to bottom left, #ff0000 0%, #000000 60%, #000000 100%);
+}
+
+.semi-sphere--blue {
+    background: linear-gradient(to bottom left, #0011ff 0%, #000000 60%, #000000 100%);
+}
+
+.semi-sphere--blue .bold-text > div {
+    margin-bottom: 2vh;
 }
 
 .text-block2 {
-    /* font-family: 'Beautifully', sans-serif; */
-    font-size: 1vw;
-    line-height: 1.2;
-    font-weight: 400;
-    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    font-size: clamp(16px, 2vw, 30px);
+    font-weight: 800;
+    line-height: 1;
+    white-space: normal;
+}
+
+.text-block2 div {
+    letter-spacing: 0.15em;
+    margin-bottom: 1vh;
+    white-space: nowrap;
+    display: block;
+    font-size: clamp(12px, 1.5vw, 24px);
+    line-height: 1.3;
 }
 
 .bold-text {
-    position: absolute;
     text-align: center;
-    top: 1050px;
-    left: 50%;
-    transform: translateX(-50%);
     font-weight: 1000;
     letter-spacing: 0.1em;
-    font: optional;
-    font-size: 5vw;
+    font-size: clamp(20px, 2.5vw, 40px);
     color: white;
-    z-index: 10;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
 }
 
-@media (max-width: 480px) {
-    .text-block {
-        font-size: 8vw;
+.bold-text > div:not(:last-child) {
+    margin-bottom: 3vh;
+}
+
+@keyframes slideInFromLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .text-block1 {
+        font-size: clamp(20px, 8vw, 48px);
     }
 
-    .image-block {
-        width: 80vw;
-        height: 80vw;
+    .text-block2 {
+        font-size: clamp(14px, 4vw, 28px);
+    }
+
+    .text-block2 div {
+        font-size: clamp(10px, 3.5vw, 20px);
+    }
+
+    .bold-text {
+        font-size: clamp(18px, 5vw, 36px);
     }
 }
