@@ -213,16 +213,15 @@ img {
   .hero-section {
     flex-direction: column;
     align-items: center;
-    padding-top: 100px;
-    gap: 20px;
+    padding-top: 150px;
+    gap: 40px;
   }
 
   .text-block1 {
     width: 100%;
     text-align: center;
     font-size: 6vw;
-    position: relative;
-    z-index: 1;
+    margin-bottom: 20px;
   }
 
   .text-block1 div {
@@ -230,27 +229,24 @@ img {
   }
 
   .image-block {
-    width: 70vw;
+    width: 60vw;
+    max-width: 300px;
     aspect-ratio: 1 / 1;
     position: relative;
-    z-index: 0;
-    margin-top: 0;
     margin-bottom: 40px;
   }
 
   .circle-background,
   .circle-image {
-    position: relative;
-    top: 0;
-    left: 0;
+    position: static;
     width: 100%;
     height: auto;
-    border-radius: 50%;
-    object-fit: cover;
+    margin: 0 auto;
+    display: block;
   }
 
   .circle-image {
-    margin-top: 0;
+    margin-top: -20px;
   }
 
   .semi-sphere {
