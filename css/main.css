@@ -206,57 +206,74 @@ img {
 }
 
 @media (max-width: 768px) {
-    .hero-section {
-        flex-direction: column;
-        align-items: center;
-        padding-top: 200px;
-        gap: 50px;
-    }
+  body {
+    padding: 0 2%;
+  }
 
-    .text-block1 {
-        z-index: 2;
-        width: 100%;
-        font-size: 6vw;
-        text-align: center;
-    }
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    gap: 20px;
+  }
 
-    .text-block1 div {
-        transform: none;
-    }
+  .text-block1 {
+    width: 100%;
+    text-align: center;
+    font-size: 6vw;
+    position: relative;
+    z-index: 1;
+  }
 
-    .image-block {
-        z-index: 1;
-        width: 70vw;
-        margin-bottom: 40px;
-        position: relative;
-        aspect-ratio: 1 / 1;
-    }
+  .text-block1 div {
+    transform: none;
+  }
 
-    .circle-background,
-    .circle-image {
-        position: relative;
-        margin: 0 auto;
-        display: block;
-        width: 100%;
-        height: auto;
-    }
+  .image-block {
+    width: 70vw;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    z-index: 0;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
 
-    .circle-image {
-        margin-top: -10px;
-    }
+  .circle-background,
+  .circle-image {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 
-    .semi-sphere {
-        margin: 100px auto 30px auto;
-        padding: 40px 20px;
-        width: 90vw;
-    }
+  .circle-image {
+    margin-top: 0;
+  }
 
-    .bold-text {
-        font-size: 4vw;
-    }
+  .semi-sphere {
+    position: relative;
+    margin: 100px auto 30px auto;
+    padding: 40px 20px;
+    width: 90vw;
+    left: 0;
+    transform: none;
+  }
 
-    .text-block2 div {
-        font-size: 3.5vw;
-        white-space: normal;
-    }
+  .bold-text {
+    font-size: 4vw;
+  }
+
+  .text-block2 {
+    font-size: 4vw;
+    text-align: center;
+  }
+
+  .text-block2 div {
+    font-size: 3.5vw;
+    white-space: normal;
+    word-break: break-word;
+  }
 }
