@@ -133,6 +133,7 @@ img {
 
 .semi-sphere--blue {
     margin-top: 300px;
+    margin-bottom: 200px;
     background: linear-gradient(to bottom left, #0011ff 0%, #000000 60%, #000000 100%);
     z-index: 2;
 }
@@ -154,12 +155,8 @@ img {
     margin-bottom: 3vh;
 }
 
-.bold-text>div:not(:last-child) {
-    margin-bottom: 3vh;
-}
-
 .semi-sphere--blue .bold-text>div {
-    margin-bottom: 2vh;
+    margin-bottom: 4vh;
 }
 
 .text-block2 {
