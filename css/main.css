@@ -124,24 +124,6 @@ img {
     text-align: center;
 }
 
-/* .semi-sphere {
-    position: relative;
-    width: 90vw;
-    max-width: 500px;
-    height: 500px;
-    border-top-left-radius: 200px;
-    border-top-right-radius: 200px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 60px 30px 30px 30px;
-    box-sizing: border-box;
-    text-align: center;
-    overflow: visible;
-} */
 
 .semi-sphere--red {
     margin-top: 30px;
@@ -206,72 +188,70 @@ img {
 }
 
 @media (max-width: 768px) {
-  body {
-    padding: 0 2%;
-  }
-
   .hero-section {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 30px;
-}
+    padding-top: 150px;
+  }
 
   .text-block1 {
     text-align: center;
     width: 100%;
-}
+    font-size: 7vw;
+  }
 
   .text-block1 div {
     transform: none;
+    opacity: 1;
   }
 
   .image-block {
+    width: 65vw;
+    max-width: 300px;
     margin-top: 0;
-    width: 70vw;
+    margin-bottom: 40px;
     aspect-ratio: 1 / 1;
-}
+    position: relative;
+  }
 
   .circle-background,
   .circle-image {
-    position: static;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
     width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
+    height: 100%;
+  }
+
+  .circle-background {
+    z-index: 1;
   }
 
   .circle-image {
-    margin-top: -20px;
+    z-index: 2;
+    object-fit: cover;
   }
 
   .semi-sphere {
     position: relative;
-    margin: 100px auto 30px auto;
-    padding: 40px 20px;
-    width: 90vw;
-    left: 0;
+    margin: 80px auto 40px auto;
     transform: none;
+    left: auto;
   }
 
   .semi-sphere--at-2-3 {
-    top: 150vh;
+    top: auto;
   }
 
   .semi-sphere--at-3-3 {
-    top: 240vh;
-  }
-  
-  .bold-text {
-    font-size: 4vw;
-  }
-
-  .text-block2 {
-    font-size: 4vw;
-    text-align: center;
+    top: auto;
   }
 
   .text-block2 div {
-    font-size: 3.5vw;
+    font-size: 3.7vw;
     white-space: normal;
     word-break: break-word;
   }
