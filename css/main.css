@@ -70,9 +70,9 @@ body {
     width: 80vw;
     max-width: 500px;
     aspect-ratio: 1 / 1;
-    margin-top: -200px; 
+    margin-top: -200px;
     margin-bottom: 100px;
-    align-self: flex-end; 
+    align-self: flex-end;
 }
 
 .circle-background {
@@ -88,7 +88,7 @@ body {
 
 .circle-image {
     position: absolute;
-    top: -50px; 
+    top: -50px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -104,25 +104,26 @@ img {
 
 
 .semi-sphere {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90vw;
-  max-width: 500px;
-  height: 500px;
-  border-top-left-radius: 200px;
-  border-top-right-radius: 200px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 60px 30px 30px 30px;
-  box-sizing: border-box;
-  color: white;
-  text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    max-width: 500px;
+    height: 500px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 60px 30px 30px 30px;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
 }
+
 /* .semi-sphere {
     position: relative;
     width: 90vw;
@@ -155,11 +156,11 @@ img {
 }
 
 .semi-sphere--at-2-3 {
-  top: 130vh;
+    top: 130vh;
 }
 
 .semi-sphere--at-3-3 {
-  top: 210vh;
+    top: 210vh;
 }
 
 .bold-text {
@@ -225,6 +226,21 @@ img {
     .image-block {
         width: 70vw;
         margin-bottom: 40px;
+        position: relative;
+        aspect-ratio: 1 / 1;
+    }
+
+    .circle-background,
+    .circle-image {
+        position: static;
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .circle-image {
+        margin-top: -10px;
     }
 
     .semi-sphere {
