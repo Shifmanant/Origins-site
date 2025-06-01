@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Origin</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
 </head>
-
 <body>
 
+    <!-- Hero Section -->
     <div class="hero-section">
         <div class="text-block1">
             <div>ORIGIN</div>
@@ -21,18 +20,18 @@
             <div class="circle-background"></div>
             <img src="images/ball.jpg" alt="Мяч" class="circle-image" />
         </div>
-
     </div>
 
+    <!-- Main Content -->
     <div class="main-container">
-        
-        <div class="semi-sphere semi-sphere--red semi-sphere--at-2-3">
 
+        <!-- About Us Section -->
+        <div class="semi-sphere semi-sphere--red semi-sphere--at-2-3">
             <div class="bold-text" style="margin-top: -20px;">
                 <div>ABOUT US</div>
             </div>
 
-            <div class="text-block2">   
+            <div class="text-block2">
                 <div>We are a dynamic and innovative</div>
                 <div>sports management agency based in</div>
                 <div>Madrid. At OSMC we specialize in talent</div>
@@ -49,33 +48,33 @@
                 <div>enables us to bridge the gap across</div>
                 <div>borders.</div>
             </div>
-
         </div>
 
+        <!-- Services Section -->
         <div class="semi-sphere semi-sphere--blue semi-sphere--at-3-3">
-
             <div class="bold-text" style="text-decoration: underline;">
                 <div>SERVICES</div>
             </div>
 
-            <div class="bold-text srevices">
+            <div class="bold-text services">
                 <div>LEGAL REPRESENTATION</div>
                 <div>ASSET MANAGMENT</div>
                 <div>CONSULTATIONS</div>
                 <div>ATHLETE REPRESENTATION</div>
             </div>
-
         </div>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const textBlock = document.querySelector('.text-block1');
-                setTimeout(() => {
-                    textBlock.classList.add('animate');
-                }, 100);
-            });
-        </script>
     </div>
-</body>
 
+    <!-- Animations -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const textBlock = document.querySelector('.text-block1');
+            setTimeout(() => {
+                textBlock.classList.add('animate');
+            }, 100);
+        });
+    </script>
+
+</body>
 </html>
