@@ -181,19 +181,37 @@ img {
 }
 
 @media (max-width: 768px) {
-    .text-block1 {
-        font-size: clamp(20px, 8vw, 48px);
-    }
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+    gap: 50px;
+  }
 
-    .text-block2 {
-        font-size: clamp(14px, 4vw, 28px);
-    }
+  .text-block1 {
+    width: 100%;
+    font-size: 6vw;
+    text-align: center;
+  }
 
-    .text-block2 div {
-        font-size: clamp(10px, 3.5vw, 20px);
-    }
+  .image-block {
+    width: 70vw;
+    transform: translateY(-100px);
+  }
 
-    .bold-text {
-        font-size: clamp(18px, 5vw, 36px);
-    }
+  .semi-sphere {
+    margin: 100px auto 30px auto;
+    width: 90vw;
+    padding: 40px 20px;
+  }
+
+  .bold-text {
+    font-size: 4vw;
+  }
+
+  .text-block2 div {
+    font-size: 3.5vw;
+    white-space: normal;
+  }
+
 }
